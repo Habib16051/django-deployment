@@ -1,0 +1,13 @@
+<!doctype html>
+{% extends 'apps/base.html' %}
+<!--inherit from the base-->
+
+{% block body_block %}
+<h3>Musician form!!</h3>
+<form method="POST">
+    {{ musician_form }}
+    {% csrf_token %}
+    <input type="submit" name="submit" value="Add"
+           class="btn btn-primary btn-small">
+</form>
+{% endblock %}
